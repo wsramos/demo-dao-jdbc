@@ -38,5 +38,11 @@ public class Program {
 		Seller sl2 = new Seller(null, "José Bezerra", "jose@gmail.com", new Date (sdf.parse("03/03/1985").getTime()), 4000.0, new Department(2, null));
 		sd.insert(sl2);
 		
+		System.out.println("\n==== TEST 5: Update ====");
+		
+		Seller sl3 = new Seller(10, "Romero Bezerra", "romero@gmail.com", new Date (sdf.parse("05/07/1985").getTime()), 4000.0, new Department(3, null));
+		sd.update(sl3);
+		System.out.println(sd.findById(10));
+		
 	}
 }
